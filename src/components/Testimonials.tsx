@@ -33,7 +33,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section id="testimonios" className="py-24 bg-muted/30">
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-16">

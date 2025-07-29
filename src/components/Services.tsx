@@ -92,9 +92,16 @@ const Services = () => {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <button className="btn-primary">
+          <a 
+            href="#nosotros" 
+            className="btn-primary"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('nosotros')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
             Descubre cómo podemos ayudarte
-          </button>
+          </a>
         </div>
       </div>
     </section>

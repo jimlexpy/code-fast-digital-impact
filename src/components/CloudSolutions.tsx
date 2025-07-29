@@ -60,12 +60,26 @@ const CloudSolutions = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="btn-primary">
+              <a 
+                href="#contacto" 
+                className="btn-primary"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Consulta gratuita
-              </button>
-              <button className="btn-outline">
+              </a>
+              <a 
+                href="#testimonios" 
+                className="btn-outline"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('testimonios')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Ver casos de éxito
-              </button>
+              </a>
             </div>
           </div>
 
