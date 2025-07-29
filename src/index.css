@@ -1,42 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Code Fast Design System - Corporate Digital Consultancy 
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Code Fast Brand Colors */
+    --background: 0 0% 0%; /* Black background */
+    --foreground: 210 20% 98%; /* White text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 3%;
+    --card-foreground: 210 20% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 3%;
+    --popover-foreground: 210 20% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 200 85% 60%; /* #39B6F2 - Celeste claro */
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 140 76% 36%; /* #1FAF61 - Verde medio */
+    --secondary-foreground: 210 20% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --tertiary: 178 100% 22%; /* #006F6D - Verde oscuro */
+    --tertiary-foreground: 210 20% 98%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 10% 10%;
+    --muted-foreground: 214 13% 58%; /* #94A3B8 - Slate 400 */
+
+    --accent: 0 0% 8%;
+    --accent-foreground: 210 20% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 217 10% 15%;
+    --input: 217 10% 15%;
+    --ring: 200 85% 60%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Code Fast Specific Design Tokens */
+    --primary-hover: 200 80% 55%; /* #2C9DD8 */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 0% / 0.8), hsl(0 0% 0% / 0.9));
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.2);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +114,70 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+@layer components {
+  /* Code Fast Corporate Button Variants */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-[hsl(var(--primary-hover))] 
+           px-8 py-4 rounded-lg font-semibold transition-all duration-300 
+           shadow-[var(--shadow-elegant)] hover:shadow-[var(--shadow-glow)] 
+           transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 
+           px-8 py-4 rounded-lg font-semibold transition-all duration-300;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground 
+           px-8 py-4 rounded-lg font-semibold transition-all duration-300;
+  }
+
+  /* Corporate Text Styles */
+  .heading-xl {
+    @apply text-5xl lg:text-6xl font-bold leading-tight tracking-tight;
+  }
+  
+  .heading-lg {
+    @apply text-4xl lg:text-5xl font-bold leading-tight;
+  }
+  
+  .heading-md {
+    @apply text-3xl lg:text-4xl font-semibold leading-tight;
+  }
+  
+  .heading-sm {
+    @apply text-2xl lg:text-3xl font-semibold;
+  }
+
+  /* Service Card Hover Effects */
+  .service-card {
+    @apply bg-card border border-border rounded-xl p-6 transition-all duration-300 
+           hover:border-primary/50 hover:shadow-[var(--shadow-elegant)] 
+           hover:transform hover:scale-105 cursor-pointer;
+  }
+
+  /* Navigation Link Animation */
+  .nav-link {
+    @apply relative transition-colors duration-300 
+           after:content-[''] after:absolute after:w-full after:scale-x-0 
+           after:h-0.5 after:bottom-0 after:left-0 after:bg-primary 
+           after:origin-bottom-right after:transition-transform after:duration-300 
+           hover:after:scale-x-100 hover:after:origin-bottom-left 
+           hover:text-primary;
+  }
+
+  /* Section Container */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
   }
 }
