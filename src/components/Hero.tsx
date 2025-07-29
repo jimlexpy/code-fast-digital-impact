@@ -28,14 +28,28 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="btn-primary inline-flex items-center gap-3 group">
+            <a 
+              href="#contacto" 
+              className="btn-primary inline-flex items-center gap-3 group"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Contáctanos
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
             
-            <button className="btn-outline">
+            <a 
+              href="#servicios" 
+              className="btn-outline"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Conoce nuestros servicios
-            </button>
+            </a>
           </div>
         </div>
       </div>
