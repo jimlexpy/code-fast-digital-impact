@@ -39,14 +39,14 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Teléfono',
-      content: '+593 987 968 935',
-      link: 'tel:+593987968935'
+      content: '+593 962 580 426',
+      link: 'tel:+593962580426'
     },
     {
       icon: Mail,
       title: 'Email',
-      content: 'soporte@codefast.com',
-      link: 'mailto:soporte@codefast.com'
+      content: 'soporte@codefastgroup.com',
+      link: 'mailto:soporte@codefastgroup.com'
     },
     {
       icon: MapPin,
@@ -112,9 +112,14 @@ const Contact = () => {
               <p className="text-muted-foreground mb-4">
                 Contáctanos directamente por WhatsApp para una respuesta inmediata.
               </p>
-              <button className="btn-secondary w-full">
+              <a 
+                href="https://wa.me/593962580426" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-secondary w-full inline-flex items-center justify-center"
+              >
                 Enviar WhatsApp
-              </button>
+              </a>
             </div>
           </div>
 

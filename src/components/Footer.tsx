@@ -94,19 +94,19 @@ const Footer = () => {
               <div>
                 <p className="text-muted-foreground">
                   <strong className="text-foreground">Email:</strong><br />
-                  contacto@codefast.com
+                  soporte@codefastgroup.com
                 </p>
               </div>
               <div>
                 <p className="text-muted-foreground">
                   <strong className="text-foreground">Teléfono:</strong><br />
-                  +1 (555) 123-4567
+                  +593 962 580 426
                 </p>
               </div>
               <div>
                 <p className="text-muted-foreground">
                   <strong className="text-foreground">Presencia:</strong><br />
-                  Miami, México, Colombia
+                  Ecuador, México, Panamá
                 </p>
               </div>
             </div>
