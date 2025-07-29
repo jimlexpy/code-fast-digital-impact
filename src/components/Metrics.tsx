@@ -80,11 +80,11 @@ const Metrics = () => {
               garantizar soluciones de clase mundial.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-primary font-semibold">
-              <span>AWS Partner</span>
+              <span>AWS</span>
               <span>Microsoft Azure</span>
               <span>Google Cloud</span>
               <span>Salesforce</span>
-              <span>ServiceNow</span>
+              <span>Okta/Auth0</span>
             </div>
           </div>
         </div>

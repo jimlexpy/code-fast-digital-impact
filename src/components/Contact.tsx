@@ -39,19 +39,19 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Teléfono',
-      content: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      content: '+593 987 968 935',
+      link: 'tel:+593987968935'
     },
     {
       icon: Mail,
       title: 'Email',
-      content: 'contacto@codefast.com',
-      link: 'mailto:contacto@codefast.com'
+      content: 'soporte@codefast.com',
+      link: 'mailto:soporte@codefast.com'
     },
     {
       icon: MapPin,
       title: 'Oficinas',
-      content: 'Miami, México, Colombia',
+      content: 'Quito, Ecuador',
       link: null
     }
   ];

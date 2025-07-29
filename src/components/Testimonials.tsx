@@ -4,29 +4,29 @@ import { Star, Quote } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: 'María González',
-      position: 'CTO, TechCorp',
-      content: 'Code Fast transformó completamente nuestra infraestructura. Su enfoque en DevSecOps nos permitió acelerar nuestros deployments un 300% manteniendo la máxima seguridad.',
+      name: 'Cyril Joshep',
+      position: 'CTO, Biosoftware',
+      content: 'Code Fast transformó completamente nuestra infraestructura. Su enfoque en DevSecOps nos permitió acelerar nuestros deployments un 50% manteniendo la máxima seguridad.',
       rating: 5
     },
     {
-      name: 'Carlos Rodríguez',
-      position: 'Director de Innovación, FinanceGroup',
-      content: 'La implementación de soluciones NoCode nos ahorro 6 meses de desarrollo. El equipo de Code Fast superó todas nuestras expectativas.',
+      name: 'Raúl Marquez',
+      position: 'CEO, Digital Challengers',
+      content: 'La implementación de okta como IAM nos ahorro 6 meses de desarrollo. El equipo de Code Fast superó todas nuestras expectativas.',
       rating: 5
     },
     {
-      name: 'Ana Martínez',
-      position: 'VP Technology, RetailPlus',
+      name: 'Victor Lopez',
+      position: 'Gerente TI, EcuadigitalChallengers',
       content: 'Su expertise en Data & AI nos ayudó a tomar decisiones más inteligentes. Los resultados fueron inmediatos y medibles.',
       rating: 5
     }
   ];
 
   const clientLogos = [
-    'TechCorp',
-    'FinanceGroup', 
-    'RetailPlus',
+    'Biosoftware',
+    'Digital Challengers', 
+    'Ecuadigital Challengers',
     'CloudSystems',
     'DataFlow',
     'InnovateLab'
